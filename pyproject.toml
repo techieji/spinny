@@ -8,4 +8,4 @@ author = "Pradhyum R"
 author-email = "drpradhyum2016@outlook.com"
 home-page = "https://github.com/techieji/spin"
 classifiers = [ "License :: OSI Approved :: MIT License",]
-
+description-file = "README.md"
