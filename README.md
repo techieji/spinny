@@ -1,4 +1,4 @@
-# Spin
+# Spinny
 
 Ever wanted a simple solution to a simple problem? I've attempted to do that with a *very* simple
 spinner library. It's so small, that you don't even need to install it; you can just copy and paste
@@ -10,7 +10,7 @@ it also makes it illegible. *Caveat emptor*.
 
 ## How to use it
 
-See the example below:
+See the example below (there's an error, you should import it using the phrase ``spinny``):
 
 ![Spinner Example](example.gif)
 

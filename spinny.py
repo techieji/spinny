@@ -1,3 +1,4 @@
+__doc__, __version__ = "A simple spinner library.", "1.0.0"
 import itertools, time, threading
 class Spinner:
     def __init__(self, dt='Loading...', at='Done.'): self.spinner,self.dt,self.at,self.busy = itertools.cycle('⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏'),dt,at,True
