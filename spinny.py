@@ -1,5 +1,5 @@
-__doc__, __version__ = "A simple spinner library.", "1.0.0"
-import itertools, time, threading
+__doc__, __version__ = "A simple spinner library.", "1.1.0"
+import itertools, time, threading, sys
 class Spinner:
     def __init__(self, dt='Loading...', at='Done.'): self.spinner,self.dt,self.at,self.busy = itertools.cycle('⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏'),dt,at,True
     def spin(self):
@@ -7,4 +7,4 @@ class Spinner:
     def __enter__(self): self.busy, _ = True, threading.Thread(target=self.spin).start()
     def __exit__(self, v1, v2, v3):
         self.busy, _, _ = False, time.sleep(0.1), print(' ' * (len(self.dt) + 2), end='\r')
-        return [True, print('❌ Failed: ' + repr(v2))][0] if v1 is not None else print('\r\033[0;32m✓\033[0m ' + self.at)
+        return [True, print('❌ Failed: ' + repr(v2)), sys.exit(1)][0] if v1 is not None else print('\r\033[0;32m✓\033[0m ' + self.at)
